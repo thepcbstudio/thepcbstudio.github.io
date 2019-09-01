@@ -31,30 +31,9 @@ export default () => {
         </div>
       </footer>
 
-      <script type="text/javascript">
-        {`
-          /* <![CDATA[ */
-            var WPGroHo = { "my_hash": "" };
-          /* ]]> */
-        `}
-      </script>
-
       <script
         type="text/javascript"
         src={`${siteUrl}/js/skip-link-focus-fix.js?ver=20141010`}
-      ></script>
-
-      <script type="text/javascript">
-        {`
-          /* <![CDATA[ */
-            var screenReaderText = { "expand": "<span class='screen-reader-text'>expand child menu</span>", "collapse": "<span class='screen-reader-text'>collapse child menu</span>" };
-          /* ]]> */
-        `}
-      </script>
-
-      <script
-        type="text/javascript"
-        src={`${siteUrl}/js/functions.js?ver=20150330`}
       ></script>
 
       <script

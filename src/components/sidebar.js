@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+
+import sidebarUtil from "./sidebar-utils"
 
 export default () => {
   const {
@@ -30,6 +32,9 @@ export default () => {
       }
     }
   `)
+
+  // Only run once when the component mounts.
+  useEffect(() => sidebarUtil(), [])
 
   return (
     <div id="sidebar" className="sidebar">
