@@ -17,10 +17,10 @@ const Logo = () => {
         }
       }
     }
-  `);
+  `)
 
-  return ( <Img fluid={fluid} /> )
-};
+  return <Img fluid={fluid} />
+}
 
 export default () => {
   const {
