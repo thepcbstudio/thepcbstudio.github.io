@@ -2,10 +2,13 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
-const Logo = () => {
+export default () => {
   const {
     placeholderImage: {
       childImageSharp: { fluid },
+    },
+    site: {
+      siteMetadata: { shortTitle, description, name, email, linkedIn },
     },
   } = useStaticQuery(graphql`
     query {
@@ -16,19 +19,6 @@ const Logo = () => {
           }
         }
       }
-    }
-  `)
-
-  return <Img fluid={fluid} />
-}
-
-export default () => {
-  const {
-    site: {
-      siteMetadata: { shortTitle, description, name, email, linkedIn },
-    },
-  } = useStaticQuery(graphql`
-    query {
       site {
         siteMetadata {
           shortTitle
@@ -47,7 +37,7 @@ export default () => {
         <div className="site-branding">
           <Link to="/" className="custom-logo-link">
             <div className="custom-logo">
-              <Logo />
+              <Img fluid={fluid} />
             </div>
           </Link>
           <p className="site-title">
