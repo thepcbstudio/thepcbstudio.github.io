@@ -1,6 +1,26 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Image from "./image"
+import Img from "gatsby-image"
+
+const Logo = () => {
+  const {
+    placeholderImage: {
+      childImageSharp: { fluid },
+    },
+  } = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "cropped-thePCBstudio.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 248, maxHeight: 248, cropFocus: NORTHWEST) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
+  return ( <Img fluid={fluid} /> )
+};
 
 export default () => {
   const {
@@ -26,10 +46,9 @@ export default () => {
       <header id="masthead" className="site-header" role="banner">
         <div className="site-branding">
           <Link to="/" className="custom-logo-link">
-            <Image
-              imageName="cropped-thePCBstudio.png"
-              className="custom-logo"
-            />
+            <div className="custom-logo">
+              <Logo />
+            </div>
           </Link>
           <p className="site-title">
             <Link to="/">{shortTitle}</Link>

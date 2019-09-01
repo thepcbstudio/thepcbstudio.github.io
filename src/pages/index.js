@@ -8,14 +8,14 @@ import SEO from "../components/seo"
 const Thumbnail = () => {
   const {
     placeholderImage: {
-      childImageSharp: { fixed },
+      childImageSharp: { fluid },
     },
   } = useStaticQuery(graphql`
-    query IndexThumbnailImage {
+    query {
       placeholderImage: file(relativePath: { eq: "givingLifetoPCB.png" }) {
         childImageSharp {
-          fixed(width: 485, height: 152) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 485, maxHeight: 152, cropFocus: NORTHWEST) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -25,12 +25,7 @@ const Thumbnail = () => {
   return (
     <Img
       className="attachment-post-thumbnail size-post-thumbnail wp-post-image"
-      style={{
-        display: "block",
-        margin: "0 auto",
-        maxWidth: '100%'
-      }}
-      fixed={fixed}
+      fluid={fluid}
     />
   )
 }
