@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       <Head />
 
       <Helmet>
-        <body className="home page-template-default page custom-background wp-custom-logo wp-embed-responsive" />
+        <body className="page-template-default page custom-background wp-custom-logo wp-embed-responsive" />
       </Helmet>
 
       <div id="page" className="hfeed site">

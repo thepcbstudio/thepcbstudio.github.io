@@ -11,7 +11,9 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 const SEO = ({ description = "", lang = "en", meta = [], title }) => {
-  const { site } = useStaticQuery(
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(
     graphql`
       query {
         site {
@@ -25,13 +27,13 @@ const SEO = ({ description = "", lang = "en", meta = [], title }) => {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || siteMetadata.description
 
   return (
     <Helmet
       htmlAttributes={{ lang }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -39,7 +41,7 @@ const SEO = ({ description = "", lang = "en", meta = [], title }) => {
         },
         {
           property: `og:title`,
-          content: `${title} – ${site.siteMetadata.title}`,
+          content: `${title} – ${siteMetadata.title}`,
         },
         {
           property: `og:description`,
@@ -51,15 +53,15 @@ const SEO = ({ description = "", lang = "en", meta = [], title }) => {
         },
         {
           property: `og:url`,
-          content: `${site.siteMetadata.siteUrl}`,
+          content: `${siteMetadata.siteUrl}`,
         },
         {
           property: `og:site_name`,
-          content: `${site.siteMetadata.title}`,
+          content: `${siteMetadata.title}`,
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.siteUrl}/images/cropped-thePCBstudio.png`,
+          content: `${siteMetadata.siteUrl}/images/cropped-thePCBstudio.png`,
         },
         {
           name: `og:locale`,
@@ -71,7 +73,7 @@ const SEO = ({ description = "", lang = "en", meta = [], title }) => {
         },
         {
           name: `twitter:text:title`,
-          content: `${title} – ${site.siteMetadata.title}`,
+          content: `${title} – ${siteMetadata.title}`,
         },
         {
           name: `twitter:description`,

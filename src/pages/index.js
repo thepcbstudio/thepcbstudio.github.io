@@ -6,7 +6,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Thumbnail = () => {
-  const data = useStaticQuery(graphql`
+  const {
+    placeholderImage: {
+      childImageSharp: { fixed },
+    },
+  } = useStaticQuery(graphql`
     query IndexThumbnailImage {
       placeholderImage: file(relativePath: { eq: "givingLifetoPCB.png" }) {
         childImageSharp {
@@ -22,7 +26,7 @@ const Thumbnail = () => {
     <Img
       className="attachment-post-thumbnail size-post-thumbnail wp-post-image"
       style={{ display: "block", margin: "0 auto" }}
-      fixed={data.placeholderImage.childImageSharp.fixed}
+      fixed={fixed}
     />
   )
 }

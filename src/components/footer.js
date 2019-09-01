@@ -2,7 +2,11 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 export default () => {
-  const data = useStaticQuery(graphql`
+  const {
+    site: {
+      siteMetadata: { siteUrl },
+    },
+  } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -37,7 +41,7 @@ export default () => {
 
       <script
         type="text/javascript"
-        src={`${data.site.siteMetadata.siteUrl}/js/skip-link-focus-fix.js?ver=20141010`}
+        src={`${siteUrl}/js/skip-link-focus-fix.js?ver=20141010`}
       ></script>
 
       <script type="text/javascript">
@@ -50,12 +54,12 @@ export default () => {
 
       <script
         type="text/javascript"
-        src={`${data.site.siteMetadata.siteUrl}/js/functions.js?ver=20150330`}
+        src={`${siteUrl}/js/functions.js?ver=20150330`}
       ></script>
 
       <script
         type="text/javascript"
-        src={`${data.site.siteMetadata.siteUrl}/js/wp-embed.min.js?ver=5.2.2`}
+        src={`${siteUrl}/js/wp-embed.min.js?ver=5.2.2`}
       ></script>
     </>
   )

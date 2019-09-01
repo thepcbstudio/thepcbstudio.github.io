@@ -13,7 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 export default props => {
-  const data = useStaticQuery(graphql`
+  const { allImageSharp } = useStaticQuery(graphql`
     query ImageComponentFuild {
       allImageSharp {
         edges {
@@ -31,7 +31,7 @@ export default props => {
     <Img
       className={props.className}
       fluid={
-        data.allImageSharp.edges.find(
+        allImageSharp.edges.find(
           element => element.node.fluid.src.split("/").pop() === props.imageName
         ).node.fluid
       }

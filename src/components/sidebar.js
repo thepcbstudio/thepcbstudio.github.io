@@ -1,8 +1,26 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "./image"
 
 export default () => {
+  const {
+    site: {
+      siteMetadata: { shortTitle, description, name, email, linkedIn },
+    },
+  } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          shortTitle
+          description
+          name
+          email
+          linkedIn
+        }
+      }
+    }
+  `)
+
   return (
     <div id="sidebar" className="sidebar">
       <header id="masthead" className="site-header" role="banner">
@@ -14,9 +32,9 @@ export default () => {
             />
           </Link>
           <p className="site-title">
-            <Link to="/">ThePCBStudio</Link>
+            <Link to="/">{shortTitle}</Link>
           </p>
-          <p className="site-description">Giving Life to PCB</p>
+          <p className="site-description">{description}</p>
           <button className="secondary-toggle">Menu and widgets</button>
         </div>
       </header>
@@ -46,7 +64,7 @@ export default () => {
                 id="menu-item-36"
                 className="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"
               >
-                <a href="https://www.linkedin.com/in/dolly-mitra/">
+                <a href={linkedIn}>
                   <span className="screen-reader-text">LinkedIn</span>
                 </a>
               </li>
@@ -66,12 +84,10 @@ export default () => {
                 itemType="//schema.org/PostalAddress"
                 itemProp="address"
               >
-                Dolly Mitra
+                {name}
               </div>
               <div className="confit-email">
-                <a href="mailto:dolly.mitra@thepcbstudio.com">
-                  dolly.mitra@thepcbstudio.com
-                </a>
+                <a href={`mailto:${email}`}>{email}</a>
               </div>
             </div>
           </aside>
