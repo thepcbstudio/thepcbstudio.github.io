@@ -41,12 +41,12 @@ export default () => {
         <form
           id="fs-frm"
           name="simple-contact-form"
-          accept-charset="utf-8"
+          acceptCharset="utf-8"
           action={`https://formspree.io/${email}`}
           method="post"
         >
           <fieldset id="fs-frm-inputs">
-            <label for="full-name">Full Name</label>
+            <label htmlFor="full-name">Full Name</label>
             <input
               type="text"
               name="name"
@@ -55,7 +55,7 @@ export default () => {
               required
             />
 
-            <label for="email-address">Email Address</label>
+            <label htmlFor="email-address">Email Address</label>
             <input
               type="email"
               name="_replyto"
@@ -64,7 +64,7 @@ export default () => {
               required
             />
 
-            <label for="message">Message</label>
+            <label htmlFor="message">Message</label>
             <textarea
               rows="5"
               name="message"

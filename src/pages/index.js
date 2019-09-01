@@ -25,7 +25,11 @@ const Thumbnail = () => {
   return (
     <Img
       className="attachment-post-thumbnail size-post-thumbnail wp-post-image"
-      style={{ display: "block", margin: "0 auto" }}
+      style={{
+        display: "block",
+        margin: "0 auto",
+        maxWidth: '100%'
+      }}
       fixed={fixed}
     />
   )
