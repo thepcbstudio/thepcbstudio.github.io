@@ -1,4 +1,8 @@
 {
+  "devDependencies": {
+    "@types/node": "^24.0.13",
+    "typescript": "^5.8.3",
+  },
   "name": "thepcbstudio",
   "packageManager": "yarn@4.9.2",
   "type": "module"
