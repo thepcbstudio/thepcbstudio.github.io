@@ -1,0 +1,92 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.1.1/schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              ":URL:",
+              ":BLANK_LINE:",
+              ":NODE:",
+              [":PACKAGE:", ":PACKAGE_WITH_PROTOCOL:"],
+              ":BLANK_LINE:",
+              ":PATH:"
+            ]
+          }
+        },
+        "recommended": true,
+        "useSortedAttributes": "on",
+        "useSortedKeys": "on"
+      }
+    }
+  },
+  "files": {
+    "includes": [
+      "**",
+      "!**/app/styles/root.css",
+      "!**/app/components/Sidebar/util.ts",
+      "!**/public/js/**",
+      "!**/.yarn",
+      "!**/.yarn/sdks/typescript/**",
+      "!**/.react-router/**",
+      "!**/build/**",
+      "!.pnp.cjs",
+      "!.pnp.loader.mjs"
+    ]
+  },
+  "formatter": {
+    "indentStyle": "tab",
+    "indentWidth": 4,
+    "lineWidth": 120
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "asNeeded",
+      "jsxQuoteStyle": "double",
+      "quoteStyle": "single"
+    }
+  },
+  "json": {
+    "formatter": {
+      "indentStyle": "space",
+      "indentWidth": 2
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "complexity": {
+        "useArrowFunction": "error"
+      },
+      "correctness": {
+        "noSwitchDeclarations": "error",
+        "noUndeclaredVariables": "warn",
+        "noUnusedVariables": "warn",
+        "useHookAtTopLevel": "error"
+      },
+      "recommended": true,
+      "style": {
+        "noParameterProperties": "error",
+        "useBlockStatements": "error",
+        "useConsistentArrayType": { "level": "error", "options": { "syntax": "shorthand" } },
+        "useFragmentSyntax": "error",
+        "useNamingConvention": {
+          "level": "error",
+          "options": {
+            "conventions": [{ "formats": ["CONSTANT_CASE"], "selector": { "kind": "enumMember" } }]
+          }
+        }
+      },
+      "suspicious": {
+        "noDuplicateObjectKeys": "warn"
+      }
+    }
+  },
+  "vcs": {
+    "clientKind": "git",
+    "enabled": true,
+    "useIgnoreFile": true
+  }
+}
