@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@react-router/fs-routes": "^7.6.3",
-    "@react-router/node": "^7.6.3",
+    "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.6.3",
     "isbot": "^5",
     "react": "^19.1.0",
