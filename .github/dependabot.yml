@@ -14,3 +14,8 @@ updates:
         patterns:
           - "react-router"
           - "@react-router/*"
+      vite:
+        patterns:
+          - "vite"
+          - "vite-tsconfig-paths"
+          - "vite-plugin-*"
