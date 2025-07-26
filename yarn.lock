@@ -3079,7 +3079,7 @@ __metadata:
     react-router: "npm:^7.6.3"
     typescript: "npm:^5.8.3"
     vite: "npm:^7.0.4"
-    vite-plugin-devtools-json: "npm:^0.2.1"
+    vite-plugin-devtools-json: "npm:^0.3.0"
     vite-tsconfig-paths: "npm:^5.1.4"
   languageName: unknown
   linkType: soft
@@ -3258,14 +3258,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-devtools-json@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "vite-plugin-devtools-json@npm:0.2.1"
+"vite-plugin-devtools-json@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "vite-plugin-devtools-json@npm:0.3.0"
   dependencies:
     uuid: "npm:^11.1.0"
   peerDependencies:
     vite: ^2.7.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
-  checksum: 10c0/47538b6390efcab9f362a8b161a1bebcff5ea330185e4466fdda21e4fce61683151295ddd707c4688694c539a7a3b42e86ff27802469bc20dc352c038ad68108
+  checksum: 10c0/d0075a01898fad2147138e2323e3e9bca12642260d407a3de42fedcb388f6384c32e27c93121e85d158571feefb6e0b4904795bac7d645c3bba59dc51d9427fc
   languageName: node
   linkType: hard
 
