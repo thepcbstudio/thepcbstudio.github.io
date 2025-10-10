@@ -15,7 +15,7 @@
     "@types/react": "^19.1.15",
     "@types/react-dom": "^19.2.0",
     "typescript": "^5.9.2",
-    "vite": "^7.1.7",
+    "vite": "^7.1.9",
     "vite-plugin-devtools-json": "^1.0.0",
     "vite-tsconfig-paths": "^5.1.4"
   },
