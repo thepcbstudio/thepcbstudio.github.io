@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.1.1/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
   "assist": {
     "actions": {
       "source": {
@@ -27,11 +27,11 @@
       "**",
       "!**/app/styles/root.css",
       "!**/app/components/Sidebar/util.ts",
-      "!**/public/js/**",
+      "!**/public/js",
       "!**/.yarn",
-      "!**/.yarn/sdks/typescript/**",
-      "!**/.react-router/**",
-      "!**/build/**",
+      "!**/.yarn/sdks/typescript",
+      "!**/.react-router",
+      "!**/build",
       "!.pnp.cjs",
       "!.pnp.loader.mjs"
     ]

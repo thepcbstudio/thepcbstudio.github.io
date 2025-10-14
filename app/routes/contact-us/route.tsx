@@ -24,6 +24,7 @@ const ContactUs: FC<Route.ComponentProps> = () => {
 			<div className="entry-content">
 				<h3>Want to talk? So do we.</h3>
 				<p>Fill out the form below and we will reach out as soon as possible.</p>
+				{/* biome-ignore lint/correctness/useUniqueElementIds: ignore */}
 				<form
 					acceptCharset="utf-8"
 					action={`https://formspree.io/${email}`}
@@ -31,11 +32,14 @@ const ContactUs: FC<Route.ComponentProps> = () => {
 					method="post"
 					name="simple-contact-form"
 				>
+					{/* biome-ignore lint/correctness/useUniqueElementIds: ignore */}
 					<fieldset id="fs-frm-inputs">
 						<label htmlFor="full-name">Full Name</label>
+						{/* biome-ignore lint/correctness/useUniqueElementIds: ignore */}
 						<input id="full-name" name="name" placeholder="John Doe" required type="text" />
 
 						<label htmlFor="email-address">Email Address</label>
+						{/* biome-ignore lint/correctness/useUniqueElementIds: ignore */}
 						<input
 							id="email-address"
 							name="_replyto"
@@ -45,6 +49,7 @@ const ContactUs: FC<Route.ComponentProps> = () => {
 						/>
 
 						<label htmlFor="message">Message</label>
+						{/* biome-ignore lint/correctness/useUniqueElementIds: ignore */}
 						<textarea
 							id="message"
 							name="message"
@@ -53,6 +58,7 @@ const ContactUs: FC<Route.ComponentProps> = () => {
 							rows={5}
 						></textarea>
 
+						{/* biome-ignore lint/correctness/useUniqueElementIds: ignore */}
 						<input id="email-subject" name="_subject" type="hidden" value={emailSubject} />
 						<input name="_gotcha" style={{ display: 'none' }} type="text" />
 					</fieldset>

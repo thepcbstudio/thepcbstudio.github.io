@@ -31,6 +31,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 					<Head />
 				</head>
 				<body className="page-template-default page custom-background wp-custom-logo wp-embed-responsive">
+					{/* biome-ignore lint/correctness/useUniqueElementIds: ignore */}
 					<div className="hfeed site" id="page">
 						<a className="skip-link screen-reader-text" href="#content">
 							Skip to content
@@ -38,8 +39,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 						<Sidebar />
 
+						{/* biome-ignore lint/correctness/useUniqueElementIds: ignore */}
 						<div className="site-content" id="content">
+							{/* biome-ignore lint/correctness/useUniqueElementIds: ignore */}
 							<div className="content-area" id="primary">
+								{/* biome-ignore lint/correctness/useUniqueElementIds: ignore */}
 								<main className="site-main" id="main">
 									<article className="page type-page status-publish hentry">{children}</article>
 								</main>
