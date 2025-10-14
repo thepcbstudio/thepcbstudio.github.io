@@ -15,8 +15,11 @@ export const Footer = () => {
 					</a>
 					{` and `}
 					<a className="imprint" href="https://pages.github.com/">
-						Github Pages
+						Github Pages.
 					</a>
+					{` Version: `}
+					{/* biome-ignore lint/correctness/noUndeclaredVariables: ignore */}
+					<code>{__COMMIT_HASH__}</code>
 				</div>
 			</footer>
 
