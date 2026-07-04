@@ -5,8 +5,6 @@ export const Footer = () => {
 
 	return (
 		<>
-			{/* biome-ignore lint/a11y/useSemanticElements: ignore */}
-			{/* biome-ignore lint/correctness/useUniqueElementIds: ignore */}
 			<footer className="site-footer" id="colophon" role="contentinfo">
 				<div className="site-info">
 					{`Proudly powered by `}

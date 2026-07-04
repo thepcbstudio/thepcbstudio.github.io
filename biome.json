@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.2/schema.json",
   "assist": {
     "actions": {
       "source": {
@@ -16,7 +16,7 @@
             ]
           }
         },
-        "recommended": true,
+        "preset": "recommended",
         "useSortedAttributes": "on",
         "useSortedKeys": "on"
       }
@@ -25,6 +25,7 @@
   "files": {
     "includes": [
       "**",
+      "!**/app/styles/Genericons.svg",
       "!**/app/styles/root.css",
       "!**/app/components/Sidebar/util.ts",
       "!**/public/js",
@@ -66,7 +67,7 @@
         "noUnusedVariables": "warn",
         "useHookAtTopLevel": "error"
       },
-      "recommended": true,
+      "preset": "recommended",
       "style": {
         "noParameterProperties": "error",
         "useBlockStatements": "error",
