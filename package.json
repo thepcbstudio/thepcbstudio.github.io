@@ -20,7 +20,7 @@
     "vite-tsconfig-paths": "^6.1.1"
   },
   "name": "thepcbstudio",
-  "packageManager": "yarn@4.18.0",
+  "packageManager": "yarn@4.18.1",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
